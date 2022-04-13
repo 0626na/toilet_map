@@ -11,25 +11,6 @@ const Map = styled.div`
 
 const App = () => {
   useEffect(() => {
-    //const mapContainer = document.getElementById("map"); // 지도를 표시할 div
-    /* const mapOption = {
-      center: new kakao.maps.LatLng(33.450701, 126.570667), // 지도의 중심좌표
-      level: 3, // 지도의 확대 레벨
-    }; */
-
-    //const map = new kakao.maps.Map(mapContainer, mapOption); // 지도를 생성합니다
-
-    // 마커가 표시될 위치입니다
-    //const markerPosition = new kakao.maps.LatLng(33.450701, 126.570667);
-
-    // 마커를 생성합니다
-    /* const marker = new kakao.maps.Marker({
-      position: markerPosition,
-    }); */
-
-    // 마커가 지도 위에 표시되도록 설정합니다
-    //marker.setMap(map);
-
     const container = document.getElementById("map"); //지도를 담을 영역의 DOM 레퍼런스
     const options = {
       //지도를 생성할 때 필요한 기본 옵션

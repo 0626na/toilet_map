@@ -38,7 +38,7 @@ const App = () => {
     };
 
     const map = new kakao.maps.Map(container, options);
-    const imageSrc = `../img/scrImg.png`;
+    const imageSrc = `${process.env.PUBLIC_URL}/img/scrImg.png`;
     const imageSize = new kakao.maps.Size(64, 69);
 
     const markerImage = new kakao.maps.MarkerImage(imageSrc, imageSize);

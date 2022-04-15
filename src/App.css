@@ -1,14 +1,9 @@
-.currentPosition {
-  width: 30px;
+.toiletInfo {
+  padding: 10px;
+  font-size: 8px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
   height: 30px;
-  background: transparent;
-}
-.currentPositionStyle {
-  margin-right: 10px;
-  margin-bottom: 10px;
-  border-radius: 20px;
-  height: 35px;
-  width: 35px;
-  border: 10px soild black;
-  background: white;
+  background-color: white;
 }

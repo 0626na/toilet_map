@@ -42,8 +42,9 @@
   width: 25px;
   height: 25px;
 
-  background: white;
-  background-image: url(https://cdn.icon-icons.com/icons2/1619/PNG/512/3687825-adventure-road-street-sign-way_108812.png);
+  background-color: white;
+  background-image: url(https://media.istockphoto.com/vectors/location-search-icon-vector-id1265397544);
+  /* https://cdn.icon-icons.com/icons2/1619/PNG/512/3687825-adventure-road-street-sign-way_108812.png */
   background-position: center center;
   background-size: cover;
   border-radius: 5px;

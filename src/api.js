@@ -4,7 +4,6 @@ const dataType = "json";
 
 export const toiletApi = (pageNumber, rows) => {
   const URL = `https://reactproxyserver.herokuapp.com/${BASE_URL}?serviceKey=${key}&numOfRows=${rows}&type=${dataType}&pageNo=${pageNumber}`;
-
   return fetch(URL).then((res) => res.json());
 };
 

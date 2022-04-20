@@ -1,10 +1,13 @@
 {
   "files": {
-    "main.js": "/toilet_map/static/js/main.d1d97fce.js",
+    "main.css": "/toilet_map/static/css/main.d6358ad0.css",
+    "main.js": "/toilet_map/static/js/main.178ad68d.js",
     "index.html": "/toilet_map/index.html",
-    "main.d1d97fce.js.map": "/toilet_map/static/js/main.d1d97fce.js.map"
+    "main.d6358ad0.css.map": "/toilet_map/static/css/main.d6358ad0.css.map",
+    "main.178ad68d.js.map": "/toilet_map/static/js/main.178ad68d.js.map"
   },
   "entrypoints": [
-    "static/js/main.d1d97fce.js"
+    "static/css/main.d6358ad0.css",
+    "static/js/main.178ad68d.js"
   ]
 }

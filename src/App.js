@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Helmet } from "react-helmet";
 import styled from "styled-components";
 import { toiletApi } from "./api";
 import "./App.css";
@@ -332,6 +333,7 @@ const App = () => {
 
   return (
     <>
+      <Helmet title="🚽 Toilet Map" />
       {mapLoading ? null : (
         <>
           <InitStyle />

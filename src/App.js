@@ -53,19 +53,15 @@ const CurrentSearch = styled.div`
   border-radius: 20px;
 `;
 
-const CurrentPosition = styled.button`
+const CurrentPosition = styled.div`
   position: absolute;
+
   top: 10%;
   left: 1%;
   width: 25px;
   height: 25px;
-  background-image: url(https://w7.pngwing.com/pngs/392/88/png-transparent-computer-icons-location-google-maps-location-icon-map-symbol-material-design-thumbnail.png);
-  background-size: cover;
-  background-position: center center;
-  background-color: white;
   border: transparent;
   border-radius: 2px;
-  box-shadow: 1px 1px 2px black;
   margin-top: 10px;
   margin-left: 10px;
   z-index: 10;
@@ -204,9 +200,12 @@ const locationSuccess = async (currentPosition) => {
   <span>전국 화장실 갯수:${toiletCount} </span>
   `;
   const searchButton = `<span>현 위치에서 화장실 검색</span>`;
+  const currentBtnImage = `<img width=25px height=25px class="currentBtnImg"
+  src=https://w7.pngwing.com/pngs/392/88/png-transparent-computer-icons-location-google-maps-location-icon-map-symbol-material-design-thumbnail.png />`;
 
   totalToilet.innerHTML = toiletTotal;
   search.innerHTML = searchButton;
+  currentBtn.innerHTML = currentBtnImage;
 
   search.addEventListener("click", () =>
     markerLimit(map, toiletMarkers, toiletList)
@@ -315,7 +314,7 @@ const getToiletCount = async () => {
 };
 
 const App = () => {
-  const [mapLoading, setLoading] = useState(false);
+  const [mapLoading, setLoading] = useState(true);
 
   useEffect(() => {
     const locationOption = {
@@ -328,35 +327,32 @@ const App = () => {
       () => console.log("지도 로딩에 실패했습니다."),
       locationOption
     );
-    setLoading(true);
+    setLoading(false);
   }, []);
 
   return (
     <>
-      {mapLoading ? (
+      {mapLoading ? null : (
         <>
           <InitStyle />
           <Map id="map">
             <Totaltoilet id="totalToilet" />
-            <CurrentSearch id="currentSearch" />
             <CurrentPosition id="currentPosition"></CurrentPosition>
+            <CurrentSearch id="currentSearch" />
           </Map>
-          {mapLoading ? (
-            <ListContainer>
-              <MapHeader>
-                <Headertitle>
-                  <MapTitle>Toilet Map</MapTitle>{" "}
-                  <MapDes>
-                    화장실 위치 로드하는데 시간이 조금 필요합니다.
-                  </MapDes>
-                </Headertitle>
-              </MapHeader>
 
-              <ToiletList id="list" className="toiletList"></ToiletList>
-            </ListContainer>
-          ) : null}
+          <ListContainer>
+            <MapHeader>
+              <Headertitle>
+                <MapTitle>Toilet Map</MapTitle>{" "}
+                <MapDes>화장실 위치 로드하는데 시간이 조금 필요합니다.</MapDes>
+              </Headertitle>
+            </MapHeader>
+
+            <ToiletList id="list" className="toiletList"></ToiletList>
+          </ListContainer>
         </>
-      ) : null}
+      )}
     </>
   );
 };

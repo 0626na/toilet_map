@@ -17,6 +17,7 @@ const Map = styled.div`
 const ListContainer = styled.div`
   width: 30%;
   height: 100vh;
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4);
 `;
 const ToiletList = styled.div`
   width: 100%;

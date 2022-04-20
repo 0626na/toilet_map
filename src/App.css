@@ -1,9 +1,92 @@
+@import url("https://fonts.googleapis.com/css2?family=Cabin&family=Source+Sans+Pro:wght@300;400&display=swap");
+
 .toiletInfo {
   padding: 10px;
-  font-size: 8px;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  background-color: white;
+  box-shadow: 1px 1px 2px black;
+  border-radius: 10px;
+}
+
+.roadViewBtn {
+  width: 25px;
+  height: 25px;
+  background: white;
+  background-image: url(https://w7.pngwing.com/pngs/384/774/png-transparent-google-street-view-computer-icons-keyhole-markup-language-google-maps-navigation-map-hand-map-google-maps-navigation.png);
+  background-position: center center;
+  background-size: cover;
+  border-radius: 5px;
+  border: transparent;
+  box-shadow: 1px 1px 2px black;
+  margin-left: 5px;
+}
+
+.toiletListCointainer {
+  height: 15%;
+  margin-bottom: 10px;
+  margin: 5px;
+  box-shadow: 1px 1px 2px black;
+  border-radius: 10px;
+  padding: 5px;
+  display: flex;
+  cursor: pointer;
+}
+
+.toiletListCointainer:hover {
+  background-color: #eef7ff;
+}
+
+.roadBtn {
+  width: 25px;
+  height: 25px;
+
+  background: white;
+  background-image: url(https://cdn.icon-icons.com/icons2/1619/PNG/512/3687825-adventure-road-street-sign-way_108812.png);
+  background-position: center center;
+  background-size: cover;
+  border-radius: 5px;
+  border: transparent;
+  box-shadow: 1px 1px 2px black;
+}
+
+.routeBtn {
   display: flex;
   justify-content: center;
+  align-items: center;
+}
+
+.toiletlistInfo {
+  display: flex;
   flex-direction: column;
-  height: 30px;
-  background-color: white;
+  font-size: 11px;
+  width: 80%;
+  padding-left: 10px;
+}
+
+.toiletTitle {
+  font-size: 20px;
+  font-weight: 500;
+  margin-bottom: 10px;
+  padding-top: 10px;
+}
+
+.toiletOverlayTitle {
+  font-size: 10px;
+  font-weight: 600;
+}
+
+.toiletList {
+  overflow: scroll;
+}
+
+.toiletManager {
+  display: flex;
+}
+.phoneNumber {
+  margin-left: 10px;
+}
+* {
+  font-family: "Cabin", sans-serif;
 }
